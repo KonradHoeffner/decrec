@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Legacy Local Metagame Deck Recommender</title>
+    <script src="js/h2h.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body onLoad="main()">
+    <h1>Legacy Deck Recommender</h1>
+    <!-- TODO: instead of error prone manual input of deck names, let user select from valid values -->
+    In my local meta, there are (separated by comma, no space):
+    <input
+      type="text"
+      id="meta"
+      style="width: 50em"
+      value="Death's Shadow,Reanimator,Elves"
+    />
+    <input
+      type="submit"
+      value="Recommend Decks"
+      onClick="recommend(document.getElementById('meta').value)"
+    />
+    <p>Valid deck names: <span id="deckNames" /></p>
+  </body>
+</html>
